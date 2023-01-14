@@ -1,6 +1,6 @@
 import 'package:ecommerce/consts/consts.dart';
 
-Widget ourButton({bgcolor,textcolor, onPress,title}) {
+Widget ourButton({bgcolor,textcolor, onPress,required String buttonName}) {
   return ElevatedButton(
     style: ElevatedButton.styleFrom(
      backgroundColor: bgcolor,
@@ -9,6 +9,6 @@ Widget ourButton({bgcolor,textcolor, onPress,title}) {
       onPressed: (() {
         onPress;
       }), 
-      child: login.text.color(textcolor).fontFamily(bold).make(),
+      child: buttonName.text.color(textcolor).fontFamily(bold).make(),
       );
 }
