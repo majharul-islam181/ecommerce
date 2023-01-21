@@ -20,7 +20,8 @@ Widget customTextField({String? title, String? hint,controller}) {
           filled: true,
           border: InputBorder.none,
           focusedBorder: OutlineInputBorder(
-              borderSide: BorderSide(
+           
+              borderSide: BorderSide(   
             color: redColor,
           )),
         ),
