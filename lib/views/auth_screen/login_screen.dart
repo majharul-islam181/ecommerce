@@ -1,6 +1,7 @@
 import 'package:ecommerce/consts/consts.dart';
 import 'package:ecommerce/consts/lists.dart';
 import 'package:ecommerce/views/auth_screen/signup_screen.dart';
+import 'package:ecommerce/views/home_screen/home_screen.dart';
 import 'package:ecommerce/widgets_common/applogo_widget.dart';
 import 'package:ecommerce/widgets_common/bg_widget.dart';
 import 'package:ecommerce/widgets_common/custom_textfield.dart';
@@ -32,11 +33,13 @@ class LoginScreen extends StatelessWidget {
                     child: forgetPassword.text.make(),
                   ),
                 ),
-        
+
                 //login button
                 ourButton(
                         bgcolor: redColor,
-                        onPress: () {},
+                        onPress: () {
+                          Get.to(() => const HomeScreen());
+                        },
                         textcolor: whiteColor,
                         buttonName: login)
                     .box
@@ -44,12 +47,12 @@ class LoginScreen extends StatelessWidget {
                     .make(),
                 5.heightBox,
                 createNewAccount.text.color(fontGrey).size(11).make(),
-        
+
                 //sign up button
                 ourButton(
                         bgcolor: lightGrey,
                         onPress: () {
-                          Get.to(() =>const  SignupScreen());
+                          Get.to(() => const SignupScreen());
                         },
                         textcolor: redColor,
                         buttonName: signup)

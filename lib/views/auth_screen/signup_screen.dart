@@ -5,9 +5,15 @@ import 'package:ecommerce/widgets_common/bg_widget.dart';
 import 'package:ecommerce/widgets_common/custom_textfield.dart';
 import 'package:ecommerce/widgets_common/our_button.dart';
 
-class SignupScreen extends StatelessWidget {
+class SignupScreen extends StatefulWidget {
   const SignupScreen({super.key});
 
+  @override
+  State<SignupScreen> createState() => _SignupScreenState();
+}
+
+class _SignupScreenState extends State<SignupScreen> {
+  bool? ischeck = false;
   @override
   Widget build(BuildContext context) {
     return bgWidget(Scaffold(
@@ -39,9 +45,13 @@ class SignupScreen extends StatelessWidget {
                 Row(
                   children: [
                     Checkbox(
-                        value: false,
+                        value: ischeck,
                         checkColor: redColor,
-                        onChanged: ((value) {})),
+                        onChanged: ((value) {
+                          setState(() {
+                            ischeck = value;
+                          });
+                        })),
                     10.widthBox,
                     Expanded(
                       child: RichText(
@@ -77,15 +87,15 @@ class SignupScreen extends StatelessWidget {
                   ],
                 ),
 
-                //login button
+                //Sighup button
                 ourButton(
-                        bgcolor: redColor,
+                        bgcolor: ischeck == true? redColor : lightGrey,
                         onPress: () {},
                         textcolor: whiteColor,
                         buttonName: signup)
                     .box
                     .width(context.width - 50)
-                    .make(),
+                    .make(), 
                 5.heightBox,
 
                 // Wrapping into gesture detector of veiocity X
@@ -113,7 +123,7 @@ class SignupScreen extends StatelessWidget {
                   .rounded
                   .shadowMd
                   .make(),
-              15.heightBox,
+              20.heightBox,
             ],
           ),
         ),
