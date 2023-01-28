@@ -5,8 +5,8 @@ import 'package:ecommerce/controller/home_controller.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class Home extends StatelessWidget {
+  const Home({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -40,25 +40,33 @@ class HomeScreen extends StatelessWidget {
     ];
 
     var navBody = [
-      Container(color: Colors.blue,),
-      Container(color: Colors.amber,),
-      Container(color: Colors.purple,),
-      Container(color: Colors.cyan,)
-
-
+      Container(
+        color: Colors.blue,
+      ),
+      Container(
+        color: Colors.amber,
+      ),
+      Container(
+        color: Colors.purple,
+      ),
+      Container(
+        color: Colors.cyan,
+      )
     ];
 
     return Scaffold(
       body: Column(
         children: [
-          Obx(() =>  Expanded( 
+          Obx(
+            () => Expanded(
               child: navBody.elementAt(controller.currentNavIndex.value),
             ),
           ),
         ],
       ),
-      bottomNavigationBar: Obx(() => BottomNavigationBar(
-        currentIndex: controller.currentNavIndex.value,
+      bottomNavigationBar: Obx(
+        () => BottomNavigationBar(
+          currentIndex: controller.currentNavIndex.value,
           items: navBar,
           selectedItemColor: redColor,
           selectedLabelStyle: const TextStyle(fontFamily: semibold),
