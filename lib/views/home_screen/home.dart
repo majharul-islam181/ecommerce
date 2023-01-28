@@ -2,6 +2,10 @@
 
 import 'package:ecommerce/consts/consts.dart';
 import 'package:ecommerce/controller/home_controller.dart';
+import 'package:ecommerce/views/cart_screen/cart_screen.dart';
+import 'package:ecommerce/views/category_screen/category_screen.dart';
+import 'package:ecommerce/views/home_screen/home_screen.dart';
+import 'package:ecommerce/views/profile_screen/profile_screen.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
@@ -40,18 +44,11 @@ class Home extends StatelessWidget {
     ];
 
     var navBody = [
-      Container(
-        color: Colors.blue,
-      ),
-      Container(
-        color: Colors.amber,
-      ),
-      Container(
-        color: Colors.purple,
-      ),
-      Container(
-        color: Colors.cyan,
-      )
+     const HomeScreen(),
+     const CategoryScreen(),
+     const CartScreen(),
+     const ProfileScreen()
+      
     ];
 
     return Scaffold(

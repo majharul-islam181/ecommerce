@@ -22,3 +22,15 @@ const loginWith = "Log in with";
 
 const privacyPolicy = "Privacy Policy";
 const termAndCond = "Terms and Conditions";
+
+// home screen strings
+
+const searchanything = "Search anything....",
+    todayDeal = "Today's Deal",
+    flashsale = "Flash Sale",
+    brand = "Brand",
+    topSellers = "Top brand";
+
+const topCategoris = "Top Catagories";
+const featuredCategories = "Featured Categories";
+
