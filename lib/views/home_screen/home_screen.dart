@@ -99,13 +99,14 @@ class HomeScreen extends StatelessWidget {
                         titile: index == 0 ? topCategoris : index ==1 ? brand: topSellers ,
                   
                     ))),
-                    10.heightBox,
+                    20.heightBox,
               
                     // Feature Categories
                     Align( alignment: Alignment.centerLeft,
                       child: featuredCategories.text.color(darkFontGrey).size(18).fontFamily(semibold).make()),
                   
                   
+                   
               
               
                   ],
