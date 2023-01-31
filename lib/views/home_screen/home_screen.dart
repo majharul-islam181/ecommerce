@@ -105,10 +105,7 @@ class HomeScreen extends StatelessWidget {
                     Align( alignment: Alignment.centerLeft,
                       child: featuredCategories.text.color(darkFontGrey).size(18).fontFamily(semibold).make()),
                   
-                  
-                   
-              
-              
+                
                   ],
                 ),
               ),
