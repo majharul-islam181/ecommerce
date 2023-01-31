@@ -84,13 +84,13 @@ class HomeScreen extends StatelessWidget {
                     itemCount: secondSliderList.length,
                     itemBuilder: ((context, index) {
                       return Image.asset(
-                        secondSliderList[index], 
+                        secondSliderList[index],
                         fit: BoxFit.fill,
                       ).box.rounded.clip(Clip.antiAlias).margin(const EdgeInsets.symmetric(horizontal: 12)).make();
                     })),
                   
-                  
-                    // Category Button
+                
+                    // Category Button????h
                     10.heightBox,
                     Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,children: List.generate(3, (index) => homeButtons(
                         height: context.screenHeight * 0.15,
@@ -104,6 +104,7 @@ class HomeScreen extends StatelessWidget {
                     // Feature Categories
                     Align( alignment: Alignment.centerLeft,
                       child: featuredCategories.text.color(darkFontGrey).size(18).fontFamily(semibold).make()),
+                      // 
                   ],
                 ),
               ),
