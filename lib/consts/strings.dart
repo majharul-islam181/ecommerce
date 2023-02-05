@@ -32,9 +32,12 @@ const searchanything = "Search anything....",
     topSellers = "Top brand",
     womenDress = "Women Dress",
     girlsWatches = "Girls Watches",
-    mobilePhone= "Mobile Phone",
+    mobilePhone = "Mobile Phone",
     tshirts = "TShirts",
+    boysGlasses = "Boys Glasses",
     girlsDress = "Girls Dresses";
 
 const topCategoris = "Top Catagories";
 const featuredCategories = "Featured Categories";
+
+const featuredProduct = "Featured Products";

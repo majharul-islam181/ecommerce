@@ -1,6 +1,7 @@
 import 'package:ecommerce/consts/consts.dart';
 import 'package:ecommerce/consts/lists.dart';
 import 'package:ecommerce/views/home_screen/components/feature_button.dart';
+import 'package:ecommerce/views/home_screen/components/featured_products.dart';
 import 'package:ecommerce/widgets_common/home_buttons.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -114,14 +115,64 @@ class HomeScreen extends StatelessWidget {
                       child: Row(children: 
                         List.generate(3, (index) => Column(
                           children: [
-                            featureButton(),
+                            featureButton(icon: featuredImage1[index], title: featuredTitles1[index]),
                             10.heightBox,
-                            featureButton(),
+                            // featureButton(),
+                            // featureButton(icon: featuredImage2[index], title: featuredTitles2[index]),                          
+                          ],
+                        )).toList(),
+                      ),
+                    ), 
+
+                        // 10.heightBox,
+                    SingleChildScrollView(
+                       scrollDirection: Axis.horizontal,
+                      child: Row(children: 
+                        List.generate(3, (index) => Column(
+                          children: [
+                            featureButton(icon: featuredImage2[index], title: featuredTitles2[index]),
                           
                           ],
                         )).toList(),
                       ),
-                    )
+                    ),
+                    20.heightBox,
+
+                    Container(
+                      padding: const EdgeInsets.all(12),
+                      decoration: const BoxDecoration(color: redColor),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Align(
+                            alignment: Alignment.centerLeft,
+                            child: featuredProduct.text.white.fontFamily(bold).size(18).make()),
+
+                          SingleChildScrollView(
+                            scrollDirection: Axis.horizontal,
+                            child: Row(
+                              children: 
+                                List.generate(6, (index) => Column(
+                                  children: [
+                                   
+                                   featuredProducts(icon: imgP1,name: demoLaptopName[index],price: 555),
+                                  //  featuredProducts(icon: imgP2,name: "Laptop1",price: 555),
+                                   "demo".text.make(),
+                                   5.heightBox,
+                                  ],
+                                  
+                                )).toList()
+                              ,
+                            ),
+                          ),
+
+                        ],
+
+
+
+                      ),
+                    ),
+
 
 
 
