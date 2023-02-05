@@ -29,8 +29,12 @@ const searchanything = "Search anything....",
     todayDeal = "Today's Deal",
     flashsale = "Flash Sale",
     brand = "Brand",
-    topSellers = "Top brand";
+    topSellers = "Top brand",
+    womenDress = "Women Dress",
+    girlsWatches = "Girls Watches",
+    mobilePhone= "Mobile Phone",
+    tshirts = "TShirts",
+    girlsDress = "Girls Dresses";
 
 const topCategoris = "Top Catagories";
 const featuredCategories = "Featured Categories";
-

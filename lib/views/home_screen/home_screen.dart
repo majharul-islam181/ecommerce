@@ -1,5 +1,6 @@
 import 'package:ecommerce/consts/consts.dart';
 import 'package:ecommerce/consts/lists.dart';
+import 'package:ecommerce/views/home_screen/components/feature_button.dart';
 import 'package:ecommerce/widgets_common/home_buttons.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -9,6 +10,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return Container(
       padding: const EdgeInsets.all(12),
       color: lightGrey,
@@ -90,7 +92,7 @@ class HomeScreen extends StatelessWidget {
                     })),
                   
                 
-                    // Category Button????h
+                    // Category Button
                     10.heightBox,
                     Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,children: List.generate(3, (index) => homeButtons(
                         height: context.screenHeight * 0.15,
@@ -104,7 +106,26 @@ class HomeScreen extends StatelessWidget {
                     // Feature Categories
                     Align( alignment: Alignment.centerLeft,
                       child: featuredCategories.text.color(darkFontGrey).size(18).fontFamily(semibold).make()),
-                      // 
+
+                    
+                    20.heightBox,
+                    SingleChildScrollView(
+                       scrollDirection: Axis.horizontal,
+                      child: Row(children: 
+                        List.generate(3, (index) => Column(
+                          children: [
+                            featureButton(),
+                            10.heightBox,
+                            featureButton(),
+                          
+                          ],
+                        )).toList(),
+                      ),
+                    )
+
+
+
+
                   ],
                 ),
               ),
