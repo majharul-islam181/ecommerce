@@ -41,3 +41,14 @@ const topCategoris = "Top Catagories";
 const featuredCategories = "Featured Categories";
 
 const featuredProduct = "Featured Products";
+
+// Category Strings
+const womenClothing = "Women Clothing",
+    menClothingFashion = "Men Clothing & Fashion",
+    compAccess = "Computer & Accessories",
+    autoMobile = "Auto Mobile",
+    kidtoys = "Kids & Toys",
+    sports = "Sports",
+    jewelery = "Jewelery",
+    cellphone = "Cellphone & Tab",
+    furniture = "Furniture";
