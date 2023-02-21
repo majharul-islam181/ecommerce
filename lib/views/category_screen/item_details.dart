@@ -1,6 +1,9 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:ecommerce/consts/consts.dart';
+import 'package:ecommerce/consts/lists.dart';
 import 'package:ecommerce/widgets_common/our_button.dart';
+
+import '../home_screen/components/feature_button.dart';
 
 class ItemDetails extends StatelessWidget {
   final String? title;
@@ -8,6 +11,8 @@ class ItemDetails extends StatelessWidget {
     Key? key,
     required this.title,
   }) : super(key: key);
+  
+  get featuredImage1 => null;
 
   @override
   Widget build(BuildContext context) {
@@ -32,6 +37,7 @@ class ItemDetails extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+
                     // swiper section
                     VxSwiper.builder(
                       itemCount: 3,
@@ -46,6 +52,7 @@ class ItemDetails extends StatelessWidget {
                         );
                       },
                     ),
+                    // 
                     10.heightBox,
 
                     // title and details section
@@ -69,7 +76,9 @@ class ItemDetails extends StatelessWidget {
                       size: 25,
                       stepInt: true,
                     ),
+                    // 
                     10.heightBox,
+                  //  
                     "\$999"
                         .text
                         .color(redColor)
@@ -94,6 +103,7 @@ class ItemDetails extends StatelessWidget {
                             ],
                           ),
                         ),
+                        // 
                         const CircleAvatar(
                           backgroundColor: Colors.white,
                           child: Icon(
@@ -106,8 +116,12 @@ class ItemDetails extends StatelessWidget {
                         .box
                         .height(70)
                         .padding(const EdgeInsets.symmetric(horizontal: 16))
-                        .color(textfieldGrey).roundedSM
+                        .color(textfieldGrey)
+                        .roundedSM
                         .make(),
+
+                        // 
+                        // 
                     20.heightBox,
 
                     // 
@@ -196,17 +210,14 @@ class ItemDetails extends StatelessWidget {
                         "This is a dummy item and dummy description here.....".text.color(darkFontGrey).make(),
                         ListView(
                           shrinkWrap: true,
-
+                          physics: const NeverScrollableScrollPhysics(),
                           children: List.generate(itemDetailButtonList.length, (index) =>  ListTile(
                             title: itemDetailButtonList[index].text.fontFamily(semibold).color(darkFontGrey).make(),
                             trailing: const Icon(Icons.arrow_forward),
 
-
                           ),),
                           
-
-                          
-                         
+                                                   
                         ),
 
 
@@ -218,6 +229,9 @@ class ItemDetails extends StatelessWidget {
                         20.heightBox,
 
 
+                        // 
+
+                    
                    
                   ],
                 ),

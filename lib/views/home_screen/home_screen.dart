@@ -3,8 +3,6 @@ import 'package:ecommerce/consts/lists.dart';
 import 'package:ecommerce/views/home_screen/components/feature_button.dart';
 import 'package:ecommerce/views/home_screen/components/featured_products.dart';
 import 'package:ecommerce/widgets_common/home_buttons.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
